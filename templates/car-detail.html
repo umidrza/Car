@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Car Detail
+{% endblock title %}
+
+{% block main %}
+
+    <h2>{{car.brand}} | {{car.model}}</h2>
+    <h3>Owner: {{car.owner.name}}</h3>
+    <p>Rented by: {{car.rentedBy}}</p>
+
+{% endblock main %}

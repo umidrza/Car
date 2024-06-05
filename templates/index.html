@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock title %}
+
+{% block main %}
+    
+    <h1>Home</h1>
+    <a href="{% url 'car:cars-list' %}">Cars</a>
+    <a href="{% url 'car:owners-list' %}">Owners</a>
+
+{% endblock main %}

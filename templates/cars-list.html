@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Cars
+{% endblock title %}
+
+{% block main %}
+    
+    {% if cars %}
+        <div class="cars">
+            {% for car in cars %}
+                <a href="{% url 'car:car-detail' car.id %}"><h2>{{car.brand}} | {{car.model}}</h2></a>    
+                <h3>Owner: {{car.owner.name}}</h3>
+                <p>Rented by: {{car.rentedBy}}</p>
+                <hr>
+            {% endfor %}
+        </div>
+    {% endif %}
+{% endblock main %}
